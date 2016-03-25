@@ -2,3 +2,8 @@ bin/
 *~
 *.class
 .settings/
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+
+
