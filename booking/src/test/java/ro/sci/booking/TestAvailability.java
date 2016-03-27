@@ -10,6 +10,11 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Test class for availability check.
+ * @author alex
+ *
+ */
 public class TestAvailability {
 
 	List<Accommodation> rooms;
