@@ -44,18 +44,26 @@ public class TestAvailability {
 
 		bookings = new ArrayList<Booking>();
 
-		bookings.add(new Booking(room1, periods.get(0)));
+		//bookings.add(new Booking(room1, periods.get(0)));
+		bookings.add(new Booking(room1, null));
 	}
 
 	@Test
-	public void testPeriod() {
+	public void testPeriod()  {
+		
+		
 		Date from = getDate(2016, 7, 15);
 		Date to = getDate(2016, 7, 20);
 
-		assertFalse(findAccomodationTypeByPeriod(AccommodationType.ROYAL, from, to));
+		try {
+			assertFalse(findAccomodationTypeByPeriod(AccommodationType.ROYAL, from, to));
+		} catch (BookingPeriodValidationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	private boolean findAccomodationTypeByPeriod(AccommodationType type, Date from, Date to) {
+	private boolean findAccomodationTypeByPeriod(AccommodationType type, Date from, Date to) throws BookingPeriodValidationException {
 		boolean found = false;
 		for (Booking booking : bookings) {
 			found = booking.getRoom().getType().equals(type) && booking.getBookingPeriod().getFrom().before(from)
