@@ -22,11 +22,7 @@ public class Booking {
 		this.room = room;
 	}
 
-	public BookingPeriod getBookingPeriod() throws BookingPeriodValidationException {
-		if (bookingPeriod == null) {
-			throw new BookingPeriodValidationException("not ok");
-		}
-		
+	public BookingPeriod getBookingPeriod()  {
 		return bookingPeriod;
 	}
 

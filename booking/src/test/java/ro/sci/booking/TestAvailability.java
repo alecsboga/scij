@@ -10,6 +10,8 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import ro.sci.booking.exception.BookingPeriodValidationException;
+
 /**
  * Test class for availability check.
  * @author alex

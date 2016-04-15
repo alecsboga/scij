@@ -1,4 +1,4 @@
-package ro.sci.booking;
+package ro.sci.booking.exception;
 
 public class BookingPeriodValidationException extends Exception {
 
