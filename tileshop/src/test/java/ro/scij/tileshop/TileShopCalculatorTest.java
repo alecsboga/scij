@@ -11,6 +11,7 @@ import org.junit.Test;
 
 /**
  * Unit test for TileShopCalculator considering various type of tiles.
+ * 
  * @author alex
  *
  */
